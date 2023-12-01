@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursosService } from './cursos.service';
 
 @Component({
   selector: 'app-cursos',
@@ -9,14 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class CursosComponent implements OnInit {
 
   nomePortal: string | undefined;
-  cursos: string[] = [
-    'CS50\'s Introduction to Game Development',
-    'CS50\'s Introduction to Artificial Intelligence with Python',
-    'CS50\'s Introduction to Programming with Scratch'
-  ]
+  cursos: string[];
 
-  constructor() {
+  constructor(private cursosService:CursosService) {
     this.nomePortal = 'https://pll.harvard.edu/catalog/free'
+  
+    this.cursos = this.cursosService.getCursos();
   }
 
   ngOnInit(): void {
