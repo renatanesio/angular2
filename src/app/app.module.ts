@@ -9,13 +9,15 @@ import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.componente';
 import { CursosModule } from './cursos/cursos.module';
 import { DataBindingComponent } from './data-binding/data-binding/data-binding.component'
 import { MeuFormModule } from "./meu-form/meu-form.module";
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiro2Component,
     MeuPrimeiroComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
