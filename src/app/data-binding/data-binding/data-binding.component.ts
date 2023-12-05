@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -7,13 +6,11 @@ import { Component, OnInit } from '@angular/core';
 
 })
 
-
 export class DataBindingComponent implements OnInit {
 
   valorAtual: string = '';
   valorSalvo: string = '';
   isMouseOver: boolean = false;
-
 
   botaoClicado() {
     alert('Botão clicado!');
@@ -23,7 +20,7 @@ export class DataBindingComponent implements OnInit {
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
 
-  salvarValor(valor:string) {
+  salvarValor(valor: string) {
     this.valorSalvo = valor;
   }
 
@@ -31,9 +28,9 @@ export class DataBindingComponent implements OnInit {
     this.isMouseOver = !this.isMouseOver;
   }
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
-
 }

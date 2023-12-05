@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.componente';
 import { CursosModule } from './cursos/cursos.module';
-import { DataBindingComponent } from './data-binding/data-binding/data-binding.component';
+import { DataBindingComponent } from './data-binding/data-binding/data-binding.component'
+import { MeuFormModule } from "./meu-form/meu-form.module";
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { DataBindingComponent } from './data-binding/data-binding/data-binding.c
     MeuPrimeiroComponent,
     DataBindingComponent
   ],
+  providers: [],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CursosModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    CursosModule,
+    MeuFormModule
+  ]
 })
 export class AppModule { }
