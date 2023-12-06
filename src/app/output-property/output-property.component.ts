@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'contador',
   templateUrl: './output-property.component.html',
   styleUrls: ['./output-property.component.scss']
@@ -22,8 +23,10 @@ export class OutputPropertyComponent implements OnInit {
   }
 
   constructor() { }
-
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+
+
 
 }

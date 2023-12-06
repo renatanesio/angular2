@@ -9,13 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputPropertyComponent implements OnInit {
 
-  @Input('nome') nomeCurso: string = '';
+  @Input() nomeCurso: string = '';
 
   // nomeCurso: string = '';
 
   constructor() { }
-
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
 }
