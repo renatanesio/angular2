@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.scss']
+  styleUrls: ['./data-binding.component.scss'],
+  // outputs: ['mudouValor']
 
 })
 
@@ -13,6 +14,11 @@ export class DataBindingComponent implements OnInit {
   isMouseOver: boolean = false;
 
   nomeDoCurso: string = "Angular";
+  valorInicial = 15;
+
+  onMudouValor(evento: { novoValor: number; }) {
+    console.log(evento.novoValor);
+  }
 
   botaoClicado() {
     alert('Botão clicado!');
@@ -22,8 +28,8 @@ export class DataBindingComponent implements OnInit {
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
 
-  salvarValor(valor: string) {
-    this.valorSalvo = valor;
+  salvarValor(data: string) {
+    this.valorSalvo = data;
   }
 
   onMouseOverOut() {
